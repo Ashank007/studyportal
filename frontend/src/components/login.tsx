@@ -13,11 +13,11 @@ const Login = () => {
   const router = useRouter();
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true)
     try {
       const formData = new FormData(e.currentTarget);
       const response = await login(formData);
       if (response?.success) {
-        setLoading(true)
         toast.success(response.message);
         setTimeout(() => {
           const user = getUser(response.token);
