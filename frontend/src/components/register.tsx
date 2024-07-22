@@ -43,15 +43,15 @@ const Register = () => {
         <VStack spacing={5}>
         <FormControl>
             <FormLabel color={'white'}>Name</FormLabel>
-            <Input name='Name' variant='filled' type='text' isRequired/>
+            <Input name='Name' variant='filled' type='text' isRequired color={'white'}/>
         </FormControl>
         <FormControl>
             <FormLabel color={'white'}>Email</FormLabel>
-            <Input name='email' variant='filled' type='email'  isRequired/>
+            <Input name='email' variant='filled' type='email'  isRequired color={'white'}/>
         </FormControl>
         <FormControl>
             <FormLabel color={'white'}>Password</FormLabel>
-            <Input name='password' variant='filled' type='password' isRequired/>
+            <Input name='password' variant='filled' type='password' isRequired color={'white'}/>
         </FormControl>
         <Button type='submit'>Register</Button>
         </VStack>
