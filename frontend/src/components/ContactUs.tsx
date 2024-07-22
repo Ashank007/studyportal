@@ -1,4 +1,4 @@
-import { IconButton, useDisclosure, Button, Tooltip } from '@chakra-ui/react'
+import { IconButton, useDisclosure, Button, Tooltip, Text } from '@chakra-ui/react'
 import React from 'react'
 import { Modal, ModalBody,ModalCloseButton, ModalFooter, ModalContent, ModalOverlay, ModalHeader } from '@chakra-ui/react'
 import { PhoneIcon } from '@chakra-ui/icons';
@@ -12,11 +12,11 @@ const ContactUs = () => {
     </Tooltip>
     <Modal isOpen={isOpen} onClose={onClose} >
         <ModalOverlay/>
-            <ModalContent>
+            <ModalContent >
                 <ModalHeader>Contact Us</ModalHeader>
                 <ModalCloseButton />
-                <ModalBody>
-                    Contact at us at:
+                <ModalBody display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
+                    <Text>Contact at us at:</Text>
                     <CopyableTextBox/>
                 </ModalBody>
                 <ModalFooter>
