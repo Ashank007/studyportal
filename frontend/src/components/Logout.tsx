@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React,{ useState } from 'react'
 import { IconButton, Box, Tooltip } from '@chakra-ui/react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
@@ -19,7 +19,9 @@ const CustomIcon: React.FC = () => (
 );
 const Logout = () => {
     const router = useRouter();
+    const [loading,setLoading] = useState<boolean>()
     const handleonClick= async () => {
+        setLoading(true)
         try{
             const response = await axios.get(process.env.NEXT_PUBLIC_BACKEND_URL+'api/v1/user/logout',{
                 withCredentials:true
@@ -28,19 +30,20 @@ const Logout = () => {
                 localStorage.removeItem('user');
                 toast.success(response.data.message);
                 setTimeout(() => {
-                    
                     router.push('/');
                 }, 2000);
             }
             else{
+                setLoading(false)
                 toast.error(response.data.message);
             }
         }catch(err){
+            setLoading(false)
         }
     }
   return (
     <Tooltip label='Logout'>
-    <IconButton colorScheme='red' aria-label='logout' icon={<CustomIcon/>} onClick={handleonClick}/>
+    <IconButton colorScheme='red' isDisabled={loading} aria-label='logout' icon={<CustomIcon/>} onClick={handleonClick}/>
     </Tooltip>
   )
 }
