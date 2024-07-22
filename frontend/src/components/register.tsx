@@ -12,6 +12,7 @@ const Register = () => {
   const router = useRouter();
   const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+     setLoading(true)
     try {
       const formdata = new FormData(e.currentTarget);
       const response = await register(formdata);
@@ -22,6 +23,7 @@ const Register = () => {
         },2000);
       }
     } catch (error) {
+      setLoading(false)
       type CustomError = {
         message: string;
         response: {
@@ -54,7 +56,7 @@ const Register = () => {
             <FormLabel color={'white'}>Password</FormLabel>
             <Input name='password' variant='filled' type='password' isRequired color={'white'}/>
         </FormControl>
-        <Button type='submit'>Register</Button>
+        <Button isDisabled={loading} type='submit'>Register</Button>
         </VStack>
     </form>
     </>
