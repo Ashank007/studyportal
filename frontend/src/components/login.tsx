@@ -52,11 +52,11 @@ const Login = () => {
         <VStack spacing={5}>
           <FormControl>
             <FormLabel color={'white'}>Email</FormLabel>
-            <Input name='email' type='email' isRequired color={'white'} />
+            <Input name='email' type='email' isRequired color={'white'} bg={'black'} />
           </FormControl>
           <FormControl>
             <FormLabel color={'white'}>Password</FormLabel>
-            <Input name='password' type='password' isRequired color={'white'} />
+            <Input name='password' type='password' isRequired color={'white'} bg={'black'} />
           </FormControl>
           <Button isDisabled={loading} type='submit'>Login</Button>
         </VStack>
