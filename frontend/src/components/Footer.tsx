@@ -52,7 +52,7 @@ const Footer = () => {
         <Link href="https://www.linkedin.com/in/ashank-gupta-7b8619291/">
         <Button colorScheme='teal' variant={'link'} rightIcon={<Customicon icon='linkedin.webp'/>}>Ashank</Button>
         </Link>
-        <Link href="https://github.com/srabanmondal/mietjammu">
+        <Link href="https://github.com/Ashank007/mietstudyportal">
         <IconButton aria-label='github' icon={<Customicon icon='github.png'/>}/>
         </Link>
         </CardBody>
