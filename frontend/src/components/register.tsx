@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Button, FormControl, FormLabel, Input, VStack } from '@chakra-ui/react'
 import axios from 'axios'
 import { useRouter } from 'next/navigation';
@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import dotenv from "dotenv";
 dotenv.config();
 const Register = () => {
+   const [loading,setLoading] = useState<boolean>()
   const router = useRouter();
   const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
