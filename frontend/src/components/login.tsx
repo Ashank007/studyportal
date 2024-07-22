@@ -9,6 +9,7 @@ import { getUser } from '@/app/libs/getdata';
 import dotenv from "dotenv";
 dotenv.config();
 const Login = () => {
+  const [loading,setLoading] = useState<boolean>()
   const router = useRouter();
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -16,6 +17,7 @@ const Login = () => {
       const formData = new FormData(e.currentTarget);
       const response = await login(formData);
       if (response?.success) {
+        setLoading(true)
         toast.success(response.message);
         setTimeout(() => {
           const user = getUser(response.token);
@@ -23,9 +25,11 @@ const Login = () => {
         }, 2000);
       }
       else{
+        setLoading(false)
         toast.error(response.message);
       }
     } catch (error) {
+      setLoading(false)
       type CustomError = {
         message: string;
         response: {
@@ -54,7 +58,7 @@ const Login = () => {
             <FormLabel color={'white'}>Password</FormLabel>
             <Input name='password' type='password' isRequired color={'white'} />
           </FormControl>
-          <Button type='submit'>Login</Button>
+          <Button isDisabled={loading} type='submit'>Login</Button>
         </VStack>
       </form>
     </>
