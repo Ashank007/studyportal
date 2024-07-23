@@ -58,7 +58,6 @@ const Footer = () => {
         </CardBody>
        </Card>
     </Flex>
-    <Text bg={'#191919'} fontSize={'xl'} textAlign={'center'} pb={3}>Not Affiliated by MIET</Text>
     </>  )
 }
 
