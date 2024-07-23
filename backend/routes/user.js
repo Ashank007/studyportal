@@ -7,6 +7,6 @@ userrouter.post("/register", registeruser)
 userrouter.post("/login", loginuser)
 userrouter.get("/logout", isAuthenticated, logoutuser);
 userrouter.post("/admin", adminlogin);
-userrouter.get("/admin/getall", getallusers);
+userrouter.get("/admin/getall",authenticateLoginToken, getallusers);
 export default userrouter
 
