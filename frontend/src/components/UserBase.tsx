@@ -10,7 +10,6 @@ import {
 import React from 'react'
 type user={
     name: string
-    email:string
 }
 type UserProps={
     users:user[]
@@ -28,7 +27,6 @@ const UserBase:React.FC<UserProps> = ({users}) => {
             {users.map((user, index) => (
                 <ListItem key={index} display={'flex'} justifyContent={'space-around'} border={'2px'} p={3} borderColor={'gray.700'} rounded={'10px'} >
                     <Text><span className='text-gray-400 font-semibold'>Name:</span> {user.name}</Text>
-                    <Text><span className='text-gray-400 font-semibold'>Email:</span> {user.email}</Text>
                 </ListItem>
             ))}
         </List>
