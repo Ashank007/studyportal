@@ -95,8 +95,8 @@ const adminlogin = async (req, res) => {
 }
 const getallusers = async (req, res) => {
     try {
-        const users = await User.find();
-        res.status(200).json(new ApiResponse(true, users));
+        const users = await User.find().select("name email");
+        res.status(200).json(new ApiResponse(true,users));
     } catch (error) {
         res.status(500).json(new ApiError(false, error.message));
     }
