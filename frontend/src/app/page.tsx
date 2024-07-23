@@ -16,7 +16,7 @@ export default function Home() {
           <AnimatedText text='Welcome to Material Portal'/>
           <Flex direction={['column','column','column','row']} w={'fit-content'} gap={'20px'} justifyContent={'center'} alignItems={'center'}>
           <Box boxShadow='dark-lg' border={'2px'} borderColor={'black'} rounded={'6px'} position={'relative'} width={['90vw','90vw','500px']} height={'300px'}>
-            <HomeImage url='homeimg.avif'/>
+            <HomeImage url='image.jpeg'/>
             </Box>
             <Auth/>
           </Flex>
