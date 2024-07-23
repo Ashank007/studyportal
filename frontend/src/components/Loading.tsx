@@ -29,7 +29,7 @@ const HandwritingLoading: React.FC = () => {
       return () => {
       }
     }, [])
-    const text = "MIET-MATERIAL-PORTAL";
+    const text = "MATERIAL-PORTAL";
     const ref = useRef<HTMLDivElement|null>(null);
     return (
       <Box ref={ref} display="flex" justifyContent="center" alignItems="center" height="100vh">
