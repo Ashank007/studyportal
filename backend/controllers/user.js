@@ -93,7 +93,7 @@ const adminlogin = async (req, res) => {
         })
         res.cookie("admin",admintoken,{
             maxAge: 48 * 60 * 60 * 1000,             
-            secure: false,
+            secure: true,
             sameSite: 'None'
         })
         res.status(200).json(new ApiResponse(true, "Admin Login Successfully"));
