@@ -91,7 +91,7 @@ const adminlogin = async (req, res) => {
         const admintoken = jwt.sign({token:token },process.env.JTW_ADMIN,{
             expiresIn:'24h', 
         })
-        res.cookie("admin",admintoken,{
+        res.cookie("token",admintoken,{
             maxAge: 48 * 60 * 60 * 1000, 
         })
         res.status(200).json(new ApiResponse(true, "Admin Login Successfully"));
