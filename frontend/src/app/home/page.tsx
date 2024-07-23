@@ -51,7 +51,7 @@ const Page = () => {
     <Box overflow={'hidden'} minH={'100vh'}>
       <Flex  justifyContent={'space-between'} p={3} pr={[1,2,3]}>
         <Flex alignItems={'center'}>
-            <Image src={'/MIET.png'} alt={'MIET'} width={60} height={60} />
+            <Image src={'/logo.jpeg'} alt={'STUDYPORTAL'} width={60} height={60} />
         <Heading fontSize={['xl','2xl','3xl']} pl={5}>Material Portal</Heading>
         </Flex>
         <Flex alignItems={'center'} direction={['column-reverse','row']}>
