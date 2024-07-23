@@ -52,7 +52,7 @@ const Page = () => {
       <Flex  justifyContent={'space-between'} p={3} pr={[1,2,3]}>
         <Flex alignItems={'center'}>
             <Image src={'/MIET.png'} alt={'MIET'} width={60} height={60} />
-        <Heading fontSize={['xl','2xl','3xl']} pl={5}>MIET Material Portal</Heading>
+        <Heading fontSize={['xl','2xl','3xl']} pl={5}>Material Portal</Heading>
         </Flex>
         <Flex alignItems={'center'} direction={['column-reverse','row']}>
          {name && <Text whiteSpace={'nowrap'} p={4} pr={['0px','30px','60px']} fontSize={['md','xl','4xl']}>Welcome, {name} {randomEmote}</Text>}
