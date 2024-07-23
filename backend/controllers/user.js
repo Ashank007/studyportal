@@ -88,6 +88,12 @@ const adminlogin = async (req, res) => {
         if (token !== process.env.LOGIN_TOKEN) {
             return res.status(400).json(new ApiResponse(false, "Invalid Token You are not Admin"));
         }
+        const admintoken = jwt.sign({token:token },process.env.JTW_ADMIN,{
+            expiresIn:'24h', 
+        })
+        res.cookie("admin",admintoken,{
+            maxAge: 48 * 60 * 60 * 1000, 
+        })
         res.status(200).json(new ApiResponse(true, "Admin Login Successfully"));
     } catch (error) {
         res.status(500).json(new ApiError(false, error.message));
