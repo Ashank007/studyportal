@@ -8,8 +8,7 @@ import AllData from './AllData'
 import { alldata } from '@/app/libs/type'
 import { getAllUsers } from '@/app/libs/getdata'
 type user={
-    name: string,
-    email: string
+    name: string
 }
 const AdminHeader = () => {
     const [users, setUsers] = useState<user[]>();
