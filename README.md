@@ -1,6 +1,6 @@
 ![Made with Node.js](https://img.shields.io/badge/Made%20with-Node.js-green?style=flat-square)
 ![GitHub stars](https://img.shields.io/github/stars/Ashank007/studyportal?style=flat-square)
-![GitHub license](https://img.shields.io/github/license/Ashank007/studyportal?style=flat-square)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Express](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
